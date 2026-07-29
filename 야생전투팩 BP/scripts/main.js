@@ -26,7 +26,6 @@ let currentTime = null;
 
 
 //----------------------
-
 export let Game = {
     version: "v26.33",
 
@@ -775,7 +774,7 @@ function lobbyWorldSetting() {
     world.gameRules.doWeatherCycle = false
     world.gameRules.locationbar = false
     world.gameRules.doImmediateRespawn = true
-    world.setTimeOfDay(0)
+    world.getDimension('overworld').runCommand('time set 0')
     world.getDimension('overworld').setWeather("Clear")
 }
 
@@ -1124,12 +1123,6 @@ const Command_Data = {
     permissionLevel: CommandPermissionLevel.Host
 }
 
-const Command_vote = {
-    name: 'coin:vote',
-    description: `command.vote`,
-    permissionLevel: CommandPermissionLevel.Host
-}
-
 const Command_reset = {
     name: 'coin:reset',
     description: `command.reset`,
@@ -1279,10 +1272,6 @@ function DataHandle() {
     world.sendMessage(`할당된 공간: ${world.getDynamicPropertyTotalByteCount()} byte`)
 }
 
-function VoteHandle() {
-    system.run(() => { difficultVoteUI(); })
-}
-
 function ResetHandle() {
     system.run(() => { resetGame(); })
 }
@@ -1307,7 +1296,6 @@ system.beforeEvents.startup.subscribe((init) => {
         [Command_Team, TeamHandle],
         [Command_SURRENDER, SURRENDERHandle],
         [Command_Data, DataHandle],
-        [Command_vote, VoteHandle],
         [Command_reset, ResetHandle],
         [Command_start, StartHandle],
         [Command_info, InfoHandle]
@@ -1824,8 +1812,8 @@ system.runInterval(() => {
     }
 
 
-    if (!GAME_START && !GAME_END && OP) {
-        defaultWorldSetting();
+    if (Game.state == "lobby") {
+        lobbyWorldSetting();
         playerCirclePlace();
     }
 

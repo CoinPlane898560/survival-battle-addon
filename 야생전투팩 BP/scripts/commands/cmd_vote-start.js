@@ -20,6 +20,6 @@ export function VoteStartHandle(origin) {
 
     let time = 0;
 
-    const voteTime = system.runInterval(() => {
-    })
+    system.runTimeout(() => {
+    }, 400)
 }
