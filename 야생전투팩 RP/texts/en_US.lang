@@ -1,0 +1,96 @@
+pack.name=야전 팀 채팅 RP
+pack.description=바보들
+show.help=§7[Tip] Type §6/chelp§r§7 in chat to see available commands.
+help=§s--------------- §bHELP §3---------------\n §e/chelp §f｜ Displays the list of available commands.\n §e/rule §f｜ Shows the game description and rules.\n §e/team §f｜ Shows your team members.\n §e/team all §f｜ Shows all team rosters.\n §e/ptp §f｜ Teleports to the specified player. ( §7Spectators only§r )\n§3------------------------------------
+rule=§6--------------------- §pGame Description & Rules §6---------------------§f\n1. After voting for difficulty, players are randomly assigned to teams. Defeat all enemy teams to win.\n2. If you die, you become a ghost and can continue helping your team.\n3. If you leave the game and do not return within 5 minutes, you will be automatically eliminated.\nDisruptive behavior may result in warnings or bans by the admins. Once you join, please stay committed until the end.\n§6----------------------------------
+
+lobby.playerCount=Players
+lobby.Discord=Discord
+
+joinplayer.ui_title=Player Join Settings
+joinplayer.message=Spectator Player →
+joinplayer.message2=All players are participating.
+
+setting.title=Game Settings
+setting.show_coordinates=Show Coordinates
+setting.restrict_third-person_view=Restrict Third-Person View
+setting.render_distance_limit=Render Distance Limit (12 Chunks)
+setting.spectator_night_vision=Spectator Night Vision
+setting.beginner_mode=Beginner Mode
+setting.survival_mode=Survival Mode
+setting.team_spawn=Team Spawn
+setting.random_spawn=Random Spawn
+setting.number_of_teams=Number of Teams
+setting.number_of_teams.result=Number of Teams: %s teams
+setting.on=§aOn
+setting.off=§cOff
+
+error.TeamCountOver=§l§c[ WARNING ] §fPlayer count exceeds team count. Teams will be set to 2.
+error.TeamCountLack=§l§c[ WARNING ] §fNot enough players to start the game.
+error.AlreadyStartGame=§l§c[ WARNING ] §fThe game has already started.
+error.ChangeSettingsDuringGame=§l§c[ WARNING ] §fThe game has started, so settings cannot be changed.
+error.VoteDuringGame=§l§c[ WARNING ] §fThe game has started, so voting cannot be started.
+error.NotVoteDifficult=§l§c[ WARNING ] §fDifficulty voting has not been done yet.\n§7(Admins, please start the vote with /vote)
+error.NotGameStart.teamList=§l§c[ WARNING ] §fThe game has not started, so the team list cannot be viewed.
+error.NotGameStart.tpUI=§l§c[ WARNING ] §fThe game has not started, so the teleport feature cannot be used.
+error.NotGameStart.Surrender=§l§c[ WARNING ] §fThe game has not started, so the surrender feature cannot be used.
+error.playerUseTpUI=§l§c[ WARNING ] §fPlayers cannot use the teleport feature.
+error.SpectatorUseSurrender=§l§c[ WARNING ] §fSpectators cannot use the surrender feature.
+error.notMadeInfoList=§l§c[ WARNING ] §fThe info list has not been created yet.
+error.PTPnotPlayer=§l§c[ WARNING ] §fThe player does not exist.
+
+system.resetMessage=§l§e[ SYSTEM ] §fThe game has been reset.
+system.vote.start=§l§e[ SYSTEM ] §fDifficulty voting has started!
+system.startTPMessage=§l§e[ SYSTEM ] §fYou are a §7spectator§f. You can spectate players using the §a;tp§f command.
+
+spectatorChangeDimension.noPlayerMessage=§l§e[ SYSTEM ] §fThere are no teams in the Overworld, so you will be moved to the world spawn.
+spectatorChangeDimension.formTitle=Teleportable Players
+
+startMessage=§lThe game has started! Defeat your enemies!
+
+semiInfo.gameResult=Game Result
+semiInfo.gameResult.draw=§7Draw§f
+semiInfo.gameResult.win=%1$s%2$s Team Wins!§f
+
+vote.ui.title=Difficulty Vote
+
+vote.unit= vote
+vote.result1=§3－－－－－－ §bVote Result §3－－－－－－ 
+vote.result2=The selected difficulty is
+vote.result3=.
+
+Peaceful=Peaceful
+Easy=Easy
+Normal=Normal
+Hard=Hard
+
+Peaceful.color=§bPeaceful
+Easy.color=§aEasy
+Normal.color=§eNormal
+Hard.color=§cHard
+
+actionbar.lateGameSpectator.message=§d⚠ Match Started! §f| §e/ptp §fto spectate\n
+actionbar.lateGameSpectator.timer=Elapsed Time:
+actionbar.lateGameSpectator.discord=§9Discord§f → https://discord.gg/rheQ9Sp8MF
+
+lateGameSpectator.listTitle=§7－－－ << Spectators >> －－－
+lateGameSpectator.chatTitle=[ §l§7SPECTATOR§r ]
+lateGameSpectator.tpUItitle=§l§7Teleport List
+
+msgTitle.lobby=[ §7LOBBY§f ]
+msgTitle.end.winer=[ §l§eWIN§r ]
+msgTitle.end.loser=[ §o§cLOSE§r ]
+msgTitle.end.spectator=[ §7END§f ]
+
+command.ptp=Opens a UI to teleport to active players.
+command.chelp=Opens the help menu.
+command.rule=View the game rules.
+command.team=View the team list.
+command.gg=Create or participate in a surrender vote.
+command.data=View dynamic world space data.
+command.setting=Game settings.
+command.joinplayer=Participant settings.
+command.vote=Opens the difficulty vote UI.
+command.reset=Resets the game.
+command.start=Starts the game.
+command.info=Logs the game result to the console.

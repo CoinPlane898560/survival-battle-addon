@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"CoinPlane898560"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "야생전투 팩",
+		"description": "야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투",
+		"min_engine_version": [
+			1,
+			21,
+			90
+		],
+		"uuid": "fb7cab6c-6fb9-49fa-a2ff-6beb1f951dba",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "900f9a4b-a785-4a69-a84e-1fbcdfd98e86",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "548a4941-bb2f-4779-98c7-e4d0810cbabd",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

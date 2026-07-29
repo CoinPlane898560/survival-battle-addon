@@ -1,0 +1,71 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"CoinPlane898560"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "야생전투 팩",
+		"description": "야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투야생전투",
+		"min_engine_version": [
+			1,
+			21,
+			90
+		],
+		"uuid": "548a4941-bb2f-4779-98c7-e4d0810cbabd",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "ee8a3d74-c431-4b48-93b6-9d966158e00d",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "5c45bb11-7e3e-4d43-bbf4-4aadd41a1a03",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "fb7cab6c-6fb9-49fa-a2ff-6beb1f951dba",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "beta"
+		}
+	]
+}

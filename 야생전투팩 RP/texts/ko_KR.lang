@@ -1,0 +1,94 @@
+show.help=§7[안내] 도움말을 보려면 §6/chelp§r§7 명령어를 입력하세요!
+help=§s--------------- §b도움말 §3---------------\n §e/chelp §f｜ 사용 가능한 명령어 목록을 표시합니다.\n §e/rule §f｜ 게임 설명 및 규칙을 표시합니다.\n §e/team §f｜ 본인의 팀원을 확인합니다. \n §e/team all §f｜ 모든 팀의 구성원을 확인합니다.")\n §e/ptp §f｜ 해당 플레이어의 위치로 순간이동합니다. ( §7관전자 전용§r )\n§3------------------------------------
+rule=§6--------------------- §p게임 설명 및 규칙 §6---------------------§f\n1. 난이도 투표 후, 랜덤으로 팀을 배정 받아 적 팀을 모두 무찌르면 승리합니다.\n2. 죽으면 유령상태로 바뀌며 계속해서 팀을 도우세요.\n3. 게임 도중 나가고 5분 내에 재접속을 하지 않으면 자동 탈락이고, \n게임 진행을 방해하면 운영자가 직접 경고하거나 차단합니다. 게임에 참여하면 끝까지 책임을 다 하여 주시기를 바랍니다.\n§6----------------------------------
+
+lobby.playerCount=플레이어 수
+lobby.Discord=디스코드
+
+joinplayer.ui_title=플레이어 참가 여부 설정
+joinplayer.message=관전 플레이어 →
+joinplayer.message2=전원 참여입니다.
+
+setting.title=게임 설정
+setting.show_coordinates=좌표 표시
+setting.restrict_third-person_view=3인칭 제한
+setting.render_distance_limit=렌더 거리 제한 (12청크)
+setting.spectator_night_vision=관전자 야간투시
+setting.beginner_mode=초보 모드
+setting.survival_mode=야생 모드
+setting.team_spawn=팀 스폰
+setting.random_spawn=전체 분산 스폰
+setting.number_of_teams=팀 수
+setting.number_of_teams.result=팀 수: %s팀
+setting.on=§a켜짐
+setting.off=§c꺼짐
+
+error.TeamCountOver=§l§c[ 경고 ] §f플레이어 수가 팀 수를 초과하여 팀 수를 2로 설정됩니다.
+error.TeamCountLack=§l§c[ 경고 ] §f플레이어 수가 부족하여 게임을 시작 할 수 없습니다.
+error.AlreadyStartGame=§l§c[ 경고 ] §f이미 게임이 시작되었습니다.
+error.ChangeSettingsDuringGame=§l§c[ 경고 ] §f게임이 시작돼서 설정을 바꾸실 수 없습니다.
+error.VoteDuringGame=§l§c[ 경고 ] §f게임이 시작돼서 투표를 시작할 수 없습니다.
+error.NotVoteDifficult=§l§c[ 경고 ] §f아직 난이도 투표를 하지 않아 게임을 시작할 수 없습니다.\n§7(관리자는 /vote 로 투표를 시작해주세요)
+error.NotGameStart.teamList=§l§c[ 경고 ] §f게임이 시작되지 않아 팀 리스트를 확인하실 수 없습니다.
+error.NotGameStart.tpUI=§l§c[ 경고 ] §f게임이 시작되지 않아 티피 기능을 사용하실 수 없습니다.
+error.NotGameStart.Surrender=§l§c[ 경고 ] §f게임이 시작되지 않아 항복 기능을 사용하실 수 없습니다.
+error.playerUseTpUI=§l§c[ 경고 ] §f플레이어는 티피 기능을 사용할 수 없습니다.
+error.SpectatorUseSurrender=§l§c[ 경고 ] §f관전자는 항복 기능을 사용할 수 없습니다.
+error.notMadeInfoList=§l§c[ 경고 ] §fInfo리스트가 아직 만들어지지 않았습니다.
+error.PTPnotPlayer=§l§c[ 경고 ] §f플레이어가 존재하지 않습니다.
+
+system.resetMessage=§l§e[ 시스템 ] §f게임이 리셋 되었습니다.
+system.vote.start=§l§e[ 시스템 ] §f난이도 투표가 시작되었습니다!
+system.startTPMessage=§l§e[ 시스템 ] §f당신은 §7관전자§f입니다. §a;tp§f커맨드로 플레이어를 관전할 수 있습니다.
+
+spectatorChangeDimension.noPlayerMessage=§l§e[ 시스템 ] §f현재 오버월드에 팀이 없어 월드스폰 좌표로 이동합니다.
+spectatorChangeDimension.formTitle=티피 가능한 명단
+
+startMessage=§l게임이 시작되었습니다! 적을 무찌르세요!
+
+semiInfo.gameResult=게임 결과
+semiInfo.gameResult.draw=§7무승부§f
+semiInfo.gameResult.win=%1$s%2$s팀 승!§f
+
+vote.ui.title=난이도 투표
+
+vote.unit=표
+vote.result1=§3－－－－－－ §b투표 결과 §3－－－－－－
+vote.result2=선택된 난이도는
+vote.result3=입니다.
+
+Peaceful=평화로움
+Easy=쉬움
+Normal=보통
+Hard=어려움
+
+Peaceful.color=§b평화로움
+Easy.color=§a쉬움
+Normal.color=§e보통
+Hard.color=§c어려움
+
+actionbar.lateGameSpectator.message=§d⚠ 게임 진행 중! §f| §e/ptp§f로 관전할 수 있습니다\n
+actionbar.lateGameSpectator.timer=진행 시간:
+actionbar.lateGameSpectator.discord=§9디스코드§f → https://discord.gg/rheQ9Sp8MF
+
+lateGameSpectator.listTitle=§7－－－－ << 관전자 >> －－－－
+lateGameSpectator.chatTitle=[ §l§7관전§r ]
+lateGameSpectator.tpUItitle=§l§7티피 명단
+
+msgTitle.lobby=[ §7대기§f ]
+msgTitle.end.winer=[ §l§e승리§r ]
+msgTitle.end.loser=[ §o§c패배§r ]
+msgTitle.end.spectator=[ §7종료§f ]
+
+command.ptp=플레이 중인 플레이어에게 이동할 수 있는 UI를 엽니다.
+command.chelp=도움말을 엽니다.
+command.rule=게임 규칙을 확인합니다.
+command.team=팀 목록을 확인합니다.
+command.gg=항복 투표 생성 및 참여
+command.data=월드 동적 공간 데이터 확인
+command.setting=게임 설정
+command.joinplayer=참여자 설정
+command.vote=난이도 투표 UI를 엽니다.
+command.reset=게임을 리셋합니다.
+command.start=게임을 시작합니다.
+command.info=게임 결과를 consoleLog에 기록합니다.
