@@ -1,4 +1,37 @@
-export function getDeathReason(event) {
+import { world } from "@minecraft/server";
+import { Game, PlayerStateData, defaultPlayerDeathPos, PlayerDeathPosData } from "../game/data";
+import { SaveData } from "../utils/save-road";
+
+export const playerDeathEvent = world.afterEvents.entityDie.subscribe(ev => {
+    const entity = ev.deadEntity
+
+    if (entity.typeId != "minecraft:player") return;
+    if (Game.state != "play") return;
+    if (entity.hasTag("spectator")) return;
+
+    const deathReason = getDeathReason(ev)
+
+    let playerName = entity.name
+
+    if (entity.hasTag('bot')) {
+        playerName = entity.name.replace('bot-')
+        entity.disconnect()
+    }
+
+    let state = PlayerStateData[playerName]
+    state.death = true
+    state.reason = deathReason
+    state.liveTime = Game.data.currentTime
+
+    entity.setGameMode(`Spectator`)
+
+    PlayerDeathPosData[playerName] = new defaultPlayerDeathPos(entity.location, entity.dimension.id)
+
+    SaveData('PlayerStateData', PlayerStateData)
+    SaveData('PlayerDeathPosData', PlayerDeathPosData)
+})
+
+function getDeathReason(event) {
     // event.cause, event.damageSource, event.damagingEntity 등에서 정보 추출 시도
     const cause = event.damageSource.cause;
     const attacker = event.damageSource.damagingEntity?.name

@@ -1,14 +1,16 @@
 import { world, system } from "@minecraft/server"
 import { ModalFormData } from "@minecraft/server-ui"
-import { Game } from "../main"
-import { SaveData } from "../save-road"
+import { Game } from "../game/data"
+import { SaveData } from "../utils/save-road"
 
 export function SettingHandle(origin) {
     const player = origin.sourceEntity
 
     if (Game.state == 'play') {
-        player.sendMessage({ rawtext: [{ translate: `error.ChangeSettingsDuringGame` }] })
-        return
+        return {
+            message: `command.failure.ChangeSettingsDuringGame`,
+            status: 1
+        }
     }
 
     const Setting = Game.setting
@@ -19,7 +21,7 @@ export function SettingHandle(origin) {
         .toggle({ rawtext: [{ translate: `setting.restrict_third-person_view` }] }, { defaultValue: Setting.thirdPersonLimit })
         .toggle({ rawtext: [{ translate: `setting.render_distance_limit` }] }, { defaultValue: Setting.renderLimit })
         .toggle({ rawtext: [{ translate: `setting.team_spawn` }] }, { defaultValue: Setting.teamSpawn })
-        .toggle({ rawtext: [{ translate: `setting.survival_mode` }] }, { defaultValue: Setting.survivalMode })
+        .toggle({ rawtext: [{ translate: `setting.wild_mode` }] }, { defaultValue: Setting.wildMode })
         .slider({ rawtext: [{ translate: `setting.number_of_teams` }] }, 2, 4, { defaultValue: Setting.teamCount });
 
     system.run(() => {
@@ -31,7 +33,7 @@ export function SettingHandle(origin) {
                 Setting.thirdPersonLimit = res.formValues[1];
                 Setting.renderLimit = res.formValues[2];
                 Setting.teamSpawn = res.formValues[3];
-                Setting.survivalMode = res.formValues[4];
+                Setting.wildMode = res.formValues[4];
                 Setting.teamCount = res.formValues[5];
 
                 if (Setting.teamCount > world.getAllPlayers().filter(p => !p.hasTag("spectator")).length) {
@@ -72,7 +74,7 @@ export function SettingHandle(origin) {
                 world.sendMessage(settingMessage(`setting.show_coordinates`, Setting.showcoordinates));
                 world.sendMessage(settingMessage(`setting.restrict_third-person_view`, Setting.thirdPersonLimit, true));
                 world.sendMessage(settingMessage(`setting.render_distance_limit`, Setting.renderLimit));
-                world.sendMessage(settingMessage(`setting.survival_mode`, Setting.survivalMode, true));
+                world.sendMessage(settingMessage(`setting.wild_mode`, Setting.wildMode, true));
                 world.sendMessage({ rawtext: [{ translate: `setting.number_of_teams.result`, with: [`${Setting.teamCount}`] }] });
                 world.sendMessage(settingMessageTeamSpawn(`setting.team_spawn`, Setting.teamSpawn))
                 world.sendMessage(`§g－－－－－－－－－－－－－－－－－－－－－－－`)

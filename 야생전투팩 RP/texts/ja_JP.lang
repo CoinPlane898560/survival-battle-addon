@@ -24,21 +24,9 @@ setting.on=§aオン
 setting.off=§cオフ
 
 error.TeamCountOver=§l§c[ 警告 ] §fプレイヤー数がチーム数を超えているため、チーム数は2に設定されます。
-error.TeamCountLack=§l§c[ 警告 ] §fプレイヤー数が不足しているため、ゲームを開始できません。
-error.AlreadyStartGame=§l§c[ 警告 ] §fゲームはすでに開始されています。
-error.ChangeSettingsDuringGame=§l§c[ 警告 ] §fゲームが開始されているため、設定を変更できません。
-error.VoteDuringGame=§l§c[ 警告 ] §fゲームが開始されているため、投票を開始できません。
-error.NotVoteDifficult=§l§c[ 警告 ] §fまだ難易度投票が行われていないため、ゲームを開始できません。\n§7（管理者は /vote で投票を開始してください）
-error.NotGameStart.teamList=§l§c[ 警告 ] §fゲームが開始されていないため、チームリストを確認できません。
-error.NotGameStart.tpUI=§l§c[ 警告 ] §fゲームが開始されていないため、テレポート機能を使用できません。
-error.NotGameStart.Surrender=§l§c[ 警告 ] §fゲームが開始されていないため、降伏機能を使用できません。
-error.playerUseTpUI=§l§c[ 警告 ] §fプレイヤーはテレポート機能を使用できません。
-error.SpectatorUseSurrender=§l§c[ 警告 ] §f観戦者は降伏機能を使用できません。
-error.notMadeInfoList=§l§c[ 警告 ] §fInfoリストはまだ作成されていません。
-error.PTPnotPlayer=§l§c[ 警告 ] §fプレイヤーが存在しません。
 
 system.resetMessage=§l§e[ システム ] §fゲームがリセットされました。
-system.vote.start=§l§e[ システム ] §f難易度投票が開始されました！
+system.vote.start=**§l**§e[ システム ] §f難易度投票が開始されました！\nチャット欄に数字を入力して投票してください！\n0：ピースフル\n1：イージー\n2：ノーマル\n3：ハード
 system.startTPMessage=§l§e[ システム ] §fあなたは §7観戦者§f です。§a;tp§f コマンドでプレイヤーを観戦できます。
 
 spectatorChangeDimension.noPlayerMessage=§l§e[ システム ] §f現在オーバーワールドにチームがないため、ワールドスポーン地点へ移動します。
@@ -50,22 +38,22 @@ semiInfo.gameResult=ゲーム結果
 semiInfo.gameResult.draw=§7引き分け§f
 semiInfo.gameResult.win=%1$s%2$sチーム勝利！§f
 
-vote.ui.title=難易度投票
-
-vote.unit=票
+vote.already=すでに投票しています。
+vote.complete=%s%s §f難易度に投票しました。
 vote.result1=§3－－－－－－ §b投票結果 §3－－－－－－
-vote.result2=選択された難易度は
-vote.result3=です。
+vote.result2=選択された難易度は %s%s§rです。
 
 Peaceful=ピースフル
 Easy=イージー
 Normal=ノーマル
 Hard=ハード
 
-Peaceful.color=§bピースフル
-Easy.color=§aイージー
-Normal.color=§eノーマル
-Hard.color=§cハード
+surrender.voteStart=降伏投票が開始されました。\n生存者は/ggと入力して賛成票を投じることができます。\n過半数が賛成すると降伏となります。
+surrender.resualt.gg=%sチームが降伏しました。
+surrender.resualt.cancel=時間切れのため、降伏投票がキャンセルされました。
+surrender.vote.deathCantVote=死亡したプレイヤーは降伏投票に参加できません。
+surrender.vote.voting=降伏に賛成票を投じました。
+surrender.vote.already=すでに投票しています。
 
 actionbar.lateGameSpectator.message=§d⚠ ゲーム進行中！ §f| §e/ptp §fで観戦可能\n
 actionbar.lateGameSpectator.timer=進行時間：
@@ -92,3 +80,19 @@ command.vote=難易度投票UIを開きます。
 command.reset=ゲームをリセットします。
 command.start=ゲームを開始します。
 command.info=ゲーム結果をコンソールログに記録します。
+command.speed=ゴーストモードの移動速度を変更します。（0 ～ 10）
+
+command.failure.TeamCountLack=プレイヤー数が不足しているため、ゲームを開始できません。
+command.failure.AlreadyStartGame=ゲームはすでに開始されています。
+command.failure.ChangeSettingsDuringGame=ゲームが開始されているため、設定を変更できません。
+command.failure.VoteDuringGame=ゲームが開始されているため、投票を開始できません。
+command.failure.NotVoteDifficult=まだ難易度投票が行われていないため、ゲームを開始できません。\n§7（管理者は /vote で投票を開始してください）
+command.failure.NotGameStart.teamList=ゲームが開始されていないため、チームリストを確認できません。
+command.failure.NotGameStart.tpUI=ゲームが開始されていないため、テレポート機能を使用できません。
+command.failure.NotGameStart.Surrender=ゲームが開始されていないため、降伏機能を使用できません。
+command.failure.NotGameStart.speed=ゲームが開始されていないため、ゴーストモードの移動速度を変更できません。
+command.failure.playerUseTpUI=プレイヤーはテレポート機能を使用できません。
+command.failure.SpectatorUseSurrender=観戦者は降伏機能を使用できません。
+command.failure.notMadeInfoList=Infoリストはまだ作成されていません。
+command.failure.PTPnotPlayer=プレイヤーが存在しません。
+command.failure.speedRangeOver=設定可能な速度の範囲を超えています。\n設定可能な範囲: 0 ～ 10

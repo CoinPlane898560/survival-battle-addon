@@ -34,7 +34,7 @@
 			"type": "script",
 			"language": "javascript",
 			"uuid": "5c45bb11-7e3e-4d43-bbf4-4aadd41a1a03",
-			"entry": "scripts/main.js",
+			"entry": "scripts/utils/main.js",
 			"version": [
 				1,
 				0,
@@ -48,7 +48,7 @@
 			"version": [
 				1,
 				0,
-				0
+				1
 			]
 		},
 		{
@@ -57,6 +57,10 @@
 		},
 		{
 			"module_name": "@minecraft/server-ui",
+			"version": "beta"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
 			"version": "beta"
 		}
 	]

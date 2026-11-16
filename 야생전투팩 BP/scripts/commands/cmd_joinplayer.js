@@ -1,13 +1,15 @@
 import { world, system } from "@minecraft/server"
 import { ModalFormData } from "@minecraft/server-ui"
-import { Game } from "../main"
+import { Game } from "../game/data"
 
 export function JoinPlayerHandle(origin) {
     const player = origin.sourceEntity
 
     if (Game.state == "play") {
-        OP.sendMessage({ rawtext: [{ translate: `error.ChangeSettingsDuringGame` }] })
-        return
+        return {
+            message: `command.failure.ChangeSettingsDuringGame`,
+            status: 1
+        }
     }
 
     const form = new ModalFormData().title({ rawtext: [{ translate: `joinplayer.ui_title` }] })

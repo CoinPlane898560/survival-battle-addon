@@ -24,21 +24,9 @@ setting.on=§a켜짐
 setting.off=§c꺼짐
 
 error.TeamCountOver=§l§c[ 경고 ] §f플레이어 수가 팀 수를 초과하여 팀 수를 2로 설정됩니다.
-error.TeamCountLack=§l§c[ 경고 ] §f플레이어 수가 부족하여 게임을 시작 할 수 없습니다.
-error.AlreadyStartGame=§l§c[ 경고 ] §f이미 게임이 시작되었습니다.
-error.ChangeSettingsDuringGame=§l§c[ 경고 ] §f게임이 시작돼서 설정을 바꾸실 수 없습니다.
-error.VoteDuringGame=§l§c[ 경고 ] §f게임이 시작돼서 투표를 시작할 수 없습니다.
-error.NotVoteDifficult=§l§c[ 경고 ] §f아직 난이도 투표를 하지 않아 게임을 시작할 수 없습니다.\n§7(관리자는 /vote 로 투표를 시작해주세요)
-error.NotGameStart.teamList=§l§c[ 경고 ] §f게임이 시작되지 않아 팀 리스트를 확인하실 수 없습니다.
-error.NotGameStart.tpUI=§l§c[ 경고 ] §f게임이 시작되지 않아 티피 기능을 사용하실 수 없습니다.
-error.NotGameStart.Surrender=§l§c[ 경고 ] §f게임이 시작되지 않아 항복 기능을 사용하실 수 없습니다.
-error.playerUseTpUI=§l§c[ 경고 ] §f플레이어는 티피 기능을 사용할 수 없습니다.
-error.SpectatorUseSurrender=§l§c[ 경고 ] §f관전자는 항복 기능을 사용할 수 없습니다.
-error.notMadeInfoList=§l§c[ 경고 ] §fInfo리스트가 아직 만들어지지 않았습니다.
-error.PTPnotPlayer=§l§c[ 경고 ] §f플레이어가 존재하지 않습니다.
 
 system.resetMessage=§l§e[ 시스템 ] §f게임이 리셋 되었습니다.
-system.vote.start=§l§e[ 시스템 ] §f난이도 투표가 시작되었습니다!
+system.vote.start=§l§e[ 시스템 ] §f난이도 투표가 시작되었습니다!\n\n§r숫자를 채팅창에 입력해 투표에 참여하세요!\n\n0 - §b평화로움§r\n1 - §a쉬움§r\n2 - §e보통§r\n3 - §c어려움§r
 system.startTPMessage=§l§e[ 시스템 ] §f당신은 §7관전자§f입니다. §a;tp§f커맨드로 플레이어를 관전할 수 있습니다.
 
 spectatorChangeDimension.noPlayerMessage=§l§e[ 시스템 ] §f현재 오버월드에 팀이 없어 월드스폰 좌표로 이동합니다.
@@ -50,22 +38,22 @@ semiInfo.gameResult=게임 결과
 semiInfo.gameResult.draw=§7무승부§f
 semiInfo.gameResult.win=%1$s%2$s팀 승!§f
 
-vote.ui.title=난이도 투표
-
-vote.unit=표
+vote.already=이미 투표를 하셨습니다.
+vote.complete=%s%s §f난이도 투표 되었습니다.
 vote.result1=§3－－－－－－ §b투표 결과 §3－－－－－－
-vote.result2=선택된 난이도는
-vote.result3=입니다.
+vote.result2=선택된 난이도는 %s%s§r입니다.
 
 Peaceful=평화로움
 Easy=쉬움
 Normal=보통
 Hard=어려움
 
-Peaceful.color=§b평화로움
-Easy.color=§a쉬움
-Normal.color=§e보통
-Hard.color=§c어려움
+surrender.voteStart=항복 투표가 올라왔습니다. \n생존자는 /gg를 입력해 찬성표를 올릴 수 있습니다.\n절반 이상이 투표하면 항복처리 됩니다.
+surrender.resualt.gg=%s팀이 항복했습니다.
+surrender.resualt.cancel=시간 초과로 항복이 취소 되었습니다.
+surrender.vote.deathCantVote=죽은사람은 항복 투표를 할 수 없습니다.
+surrender.vote.voting=항복에 찬성하셨습니다.
+surrender.vote.already=이미 투표를 하셨습니다.
 
 actionbar.lateGameSpectator.message=§d⚠ 게임 진행 중! §f| §e/ptp§f로 관전할 수 있습니다\n
 actionbar.lateGameSpectator.timer=진행 시간:
@@ -92,3 +80,19 @@ command.vote=난이도 투표 UI를 엽니다.
 command.reset=게임을 리셋합니다.
 command.start=게임을 시작합니다.
 command.info=게임 결과를 consoleLog에 기록합니다.
+command.speed=유령 모드의 이동속도를 변경합니다. ( 0 ~ 10 )
+
+command.failure.TeamCountLack=플레이어 수가 부족하여 게임을 시작 할 수 없습니다.
+command.failure.AlreadyStartGame=이미 게임이 시작되었습니다.
+command.failure.ChangeSettingsDuringGame=게임이 시작돼서 설정을 바꾸실 수 없습니다.
+command.failure.VoteDuringGame=게임이 시작돼서 투표를 시작할 수 없습니다.
+command.failure.NotVoteDifficult=아직 난이도 투표를 하지 않아 게임을 시작할 수 없습니다.\n§7(관리자는 /vote 로 투표를 시작해주세요)
+command.failure.NotGameStart.teamList=게임이 시작되지 않아 팀 리스트를 확인하실 수 없습니다.
+command.failure.NotGameStart.tpUI=게임이 시작되지 않아 티피 기능을 사용하실 수 없습니다.
+command.failure.NotGameStart.Surrender=게임이 시작되지 않아 항복 기능을 사용하실 수 없습니다.
+command.failure.NotGameStart.speed=게임이 시작되지 않아 유령 이속 변경 기능을 사용하실 수 없습니다.
+command.failure.playerUseTpUI=플레이어는 티피 기능을 사용할 수 없습니다.
+command.failure.SpectatorUseSurrender=관전자는 항복 기능을 사용할 수 없습니다.
+command.failure.notMadeInfoList=Info리스트가 아직 만들어지지 않았습니다.
+command.failure.PTPnotPlayer=플레이어가 존재하지 않습니다.
+command.failure.speedRangeOver=설정 가능한 속도 범위를 벗어났습니다.\n 설정 가능한 범위 0 ~ 10
